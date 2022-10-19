@@ -14,7 +14,7 @@ const esLintPlugin = (isDev) => isDev ? [] : [new ESLintWebpackPlugin({
 module.exports = (develop) => ({
   mode: 'development',
   entry: {
-    app: './src/index.ts',
+    app: './src/app.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -41,7 +41,6 @@ module.exports = (develop) => ({
         test: /\.(woff(2)?|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-      
       // {
       //   test: /\.css$/i,
       //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
